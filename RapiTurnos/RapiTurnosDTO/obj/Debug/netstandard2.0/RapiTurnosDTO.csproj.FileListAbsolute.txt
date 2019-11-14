@@ -1,0 +1,12 @@
+C:\RapiTurnos\RapiTurnos\RapiTurnosDTO\obj\Debug\netstandard2.0\RapiTurnosDTO.csproj.CoreCompileInputs.cache
+C:\RapiTurnos\RapiTurnos\RapiTurnosDTO\obj\Debug\netstandard2.0\RapiTurnosDTO.AssemblyInfoInputs.cache
+C:\RapiTurnos\RapiTurnos\RapiTurnosDTO\obj\Debug\netstandard2.0\RapiTurnosDTO.AssemblyInfo.cs
+C:\RapiTurnos\RapiTurnos\RapiTurnosDTO\bin\Debug\netstandard2.0\RapiTurnosDTO.deps.json
+C:\RapiTurnos\RapiTurnos\RapiTurnosDTO\bin\Debug\netstandard2.0\RapiTurnosDTO.dll
+C:\RapiTurnos\RapiTurnos\RapiTurnosDTO\bin\Debug\netstandard2.0\RapiTurnosDTO.pdb
+C:\RapiTurnos\RapiTurnos\RapiTurnosDTO\obj\Debug\netstandard2.0\RapiTurnosDTO.dll
+C:\RapiTurnos\RapiTurnos\RapiTurnosDTO\obj\Debug\netstandard2.0\RapiTurnosDTO.pdb
+C:\RapiTurnos\RapiTurnos\RapiTurnosDTO\obj\Debug\netstandard2.0\RapiTurnosDTO.csprojAssemblyReference.cache
+C:\RapiTurnos\RapiTurnos\RapiTurnosDTO\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.dll
+C:\RapiTurnos\RapiTurnos\RapiTurnosDTO\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.xml
+C:\RapiTurnos\RapiTurnos\RapiTurnosDTO\obj\Debug\netstandard2.0\RapiTurnosDTO.csproj.CopyComplete

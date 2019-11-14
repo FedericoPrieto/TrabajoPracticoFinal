@@ -1,0 +1,63 @@
+﻿@model List<RapiTurnosDTO.DTOs.DuracionTurnosDTO>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<div class="container">
+    <h2>Duracion Turnos</h2>
+    <a href="https://localhost:44343/DuracionTurnos/Create" class="btn btn-success btn-lg">
+        <span class="glyphicon glyphicon-plus"> Alta </span>
+    </a>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>IdDuracionTurno</th>
+                <th>Descripcion</th>
+                <th>Minutos</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(Model => item.IdDuracionTurno, new { @class = "form-control" })</td>
+                    <td>@item.Descripcion</td>
+                    <td>@item.Minutos</td>
+                    <td>
+                        @*QUE PASA QUE NO PUEDO CREAR UN OBJETO NO LE PUEDO PASAR EL ID DESDE LA VIEW HACIA EL CONTROLER ROMERO EMILIANO PREGUNTA*@
+                        <a asp-action="Edit" asp-route-id="@item.IdDuracionTurno" class="btn btn-secondary btn-lg">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                    </td>
+                    <td>
+                        @*<a href="https://localhost:44343/DuracionTurnos/Delete" class="btn btn-secondary btn-lg">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </a>*@
+                        <a asp-action="Delete" asp-route-id="@item.IdDuracionTurno" class="btn btn-secondary btn-lg" onclick="return confirm_delete()">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+
+ <script type="text/javascript">
+        function confirm_delete() {
+         return confirm('Confirma eliminar item?');
+      }
+</script>

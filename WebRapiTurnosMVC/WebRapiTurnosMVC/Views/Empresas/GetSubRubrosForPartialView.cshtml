@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    Layout = null;
+}
+@*<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+
+    <h1>HOLAAAAA</h1>*@
+
+<div class="form-group">
+    <label for="sel2">SubRubro:</label>
+    <select class="form-control" id="sel2">
+        @foreach (var item in ViewBag.SubRubros)
+        {
+            <option>@item.Descripcion</option>
+
+        }
+    </select>
+</div>
+
+
+
+@*@foreach (var item in ViewBag.SubRubros)
+    {
+        <h2>@item.Descripcion</h2>
+
+    }*@

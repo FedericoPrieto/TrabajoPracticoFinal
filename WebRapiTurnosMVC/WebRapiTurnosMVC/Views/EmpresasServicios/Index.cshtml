@@ -1,0 +1,71 @@
+﻿@model List<RapiTurnosDTO.DTOs.EmpresasServiciosDTO>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<div class="container">
+    <h2>Servicios</h2>
+    <p>Servicios Disponibles</p>
+    <a href="https://localhost:44343/EmpresasServicios/Create" class="btn btn-success btn-lg">
+        <span class="glyphicon glyphicon-plus"> Alta </span>
+    </a>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Descripcion</th>
+                <th>Precio Sugerido</th>
+                <th>Duracion Turno</th>
+                <th></th>
+                <th></th>
+                
+
+            </tr>
+        </thead>
+        <tbody>
+
+
+
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.Descripcion</td>
+                <td>@item.PrecioSugerido</td>
+                <td data-id="@item.IdDuracionTurno">@item.IdDuracionTurnoNavigation.Descripcion</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdServicio" class="btn btn-secondary btn-lg">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                </td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@item.IdServicio" class="btn btn-secondary btn-lg" onclick="return confirm_delete()">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </a>
+
+                </td>
+            </tr>
+             }
+
+
+                
+
+
+
+            </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+@foreach (var item in Model)
+{
+    <div>@item.PrecioSugerido</div>
+}
