@@ -125,7 +125,8 @@ namespace WebRapiTurnosMVC.Controllers
         public IActionResult CreatePost(EmpresasDTO empresasDTO)
         {
 
-            empresasDTO.RubroId = 1;
+            
+           empresasDTO.RubroId = 1;
             empresasDTO.EstadoActual = 1;
             empresasDTO.Latitud = "1";
             empresasDTO.Longitud = "1";
