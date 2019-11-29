@@ -29,7 +29,8 @@ namespace RapiTurnos.Controllers
             //return await _context.Rubros.ToListAsync();
             var models = _context.Rubros;
             var dtos = Mapper.Map<IEnumerable<RubrosDTO>>(models);
-            return Ok(dtos);
+            
+            return await Task.Run(() => Ok(dtos));
         }
 
         // GET: api/Rubros/5

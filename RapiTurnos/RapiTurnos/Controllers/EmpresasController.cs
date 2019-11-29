@@ -66,9 +66,7 @@ namespace RapiTurnos.Controllers
             //Esto esta pero no puede mapear no se porque devuelvo del modelo directamente 
             //quisiera devolver EmpresasDTO mejor
 
-
-            return Ok(dto);
-
+            return await Task.Run(() => Ok(dto));
 
         }
 
@@ -115,7 +113,16 @@ namespace RapiTurnos.Controllers
         public async Task<ActionResult<Empresas>> PostEmpresas(Empresas empresas)
         {
             _context.Empresas.Add(empresas);
-            await _context.SaveChangesAsync();
+            try
+            {
+                await _context.SaveChangesAsync();
+
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
 
             return CreatedAtAction("GetEmpresas", new { id = empresas.IdEmpresa }, empresas);
         }

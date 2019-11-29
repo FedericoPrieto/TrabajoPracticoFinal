@@ -33,7 +33,8 @@ namespace RapiTurnos.Controllers
             //return await _context.DuracionTurnos.ToListAsync();
             var models = _context.DuracionTurnos;
             var dtos = Mapper.Map<IEnumerable<DuracionTurnosDTO>>(models);
-            return Ok(dtos);
+            
+            return await Task.Run(() => Ok(dtos));
         }
 
         // GET: api/DuracionTurnos/5
